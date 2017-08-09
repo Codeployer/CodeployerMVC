@@ -26,5 +26,10 @@ namespace CodeployerMVC.Controllers
 
             return View();
         }
+
+        public  ActionResult More()
+        {
+            return View();
+        }
     }
 }
