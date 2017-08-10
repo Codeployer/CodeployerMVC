@@ -203,7 +203,10 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\css\default.css" />
+    <Content Include="Content\css\items.css" />
+    <Content Include="Content\css\main.css" />
+    <Content Include="Content\img\checked.png" />
+    <Content Include="Content\js\register.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

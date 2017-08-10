@@ -77,7 +77,7 @@ namespace CodeployerMVC.Models
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Compare("Password", ErrorMessage = "Wpisane hasła nie są takie same.")]
         public string ConfirmPassword { get; set; }
     }
 
@@ -96,7 +96,7 @@ namespace CodeployerMVC.Models
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Compare("Password", ErrorMessage = "Wpisane hasła nie są takie same.")]
         public string ConfirmPassword { get; set; }
 
         public string Code { get; set; }

@@ -55,12 +55,12 @@ namespace CodeployerMVC.Controllers
         public async Task<ActionResult> Index(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
-                message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
-                : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
+                message == ManageMessageId.ChangePasswordSuccess ? "Twoje hasło zostało ustawione."
+                : message == ManageMessageId.SetPasswordSuccess ? "Hasło zostało zmienione."
                 : message == ManageMessageId.SetTwoFactorSuccess ? "Your two-factor authentication provider has been set."
-                : message == ManageMessageId.Error ? "An error has occurred."
-                : message == ManageMessageId.AddPhoneSuccess ? "Your phone number was added."
-                : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
+                : message == ManageMessageId.Error ? "Wystąpił błąd."
+                : message == ManageMessageId.AddPhoneSuccess ? "Dodano numer telefonu."
+                : message == ManageMessageId.RemovePhoneSuccess ? "Usunięto numer telefonu."
                 : "";
 
             var userId = User.Identity.GetUserId();
@@ -123,7 +123,7 @@ namespace CodeployerMVC.Controllers
                 var message = new IdentityMessage
                 {
                     Destination = model.Number,
-                    Body = "Your security code is: " + code
+                    Body = "Twój kod bezpieczeństwa to: " + code
                 };
                 await UserManager.SmsService.SendAsync(message);
             }

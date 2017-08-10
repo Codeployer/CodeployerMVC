@@ -1,14 +1,12 @@
 ﻿@model CodeployerMVC.Models.IndexViewModel
 @{
-    ViewBag.Title = "Manage";
+    ViewBag.Title = "Twoje konto";
 }
-
-<h2>@ViewBag.Title.</h2>
-
 <p class="text-success">@ViewBag.StatusMessage</p>
-<div>
-    <h4>Change your account settings</h4>
-    <hr />
+<div class="col-md-12">
+    <center>
+    <h1 class="deepshd">Witaj użytkowniku!</h1>
+    <h2>Tutaj dostosujesz konto do własnych potrzeb</h2>
     <dl class="dl-horizontal">
         <dt>Password:</dt>
         <dd>
@@ -84,4 +82,5 @@
                 }*@
         </dd>
     </dl>
+    </center>
 </div>

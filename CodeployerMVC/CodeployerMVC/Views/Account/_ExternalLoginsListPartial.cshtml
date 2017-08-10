@@ -1,20 +1,26 @@
 ﻿@model CodeployerMVC.Models.ExternalLoginListViewModel
 @using Microsoft.Owin.Security
 
-<h4>Use another service to log in.</h4>
-<hr />
+
+<h2 style="text-align:center; margin-bottom:20px;">Przy użyciu mediów</h2>
 @{
     var loginProviders = Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes();
-    if (loginProviders.Count() == 0) {
-        <div>
-            <p>
-                There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
-                for details on setting up this ASP.NET application to support logging in via external services.
-            </p>
-        </div>
+    if (loginProviders.Count() == 0)
+    {
+        <center>
+            <div>
+                <ul class="social-nav">
+                    <li><a href="#" title="Twitter" rel="nofollow" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#" title="Facebook" rel="nofollow" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#" title="Google plus" rel="nofollow" class="google"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+            </div>
+        </center>
     }
-    else {
-        using (Html.BeginForm("ExternalLogin", "Account", new { ReturnUrl = Model.ReturnUrl })) {
+    else
+    {
+        using (Html.BeginForm("ExternalLogin", "Account", new { ReturnUrl = Model.ReturnUrl }))
+        {
             @Html.AntiForgeryToken()
             <div id="socialLoginList">
                 <p>
